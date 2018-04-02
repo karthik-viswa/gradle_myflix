@@ -42,10 +42,6 @@ demo.controller('ShowItem', function($scope, $http, myService) {
 
     $scope.items = myService.getData();
 
-/*    $http.get('http://localhost:8080/gradle_myflix/rest/items/all').
-         then(function(response) {
-            $scope.items = response.data;
-        });*/
 
 //    $scope.$watch(function () { return myService.getData(); }, function (value) {
 //            $scope.items = value;
