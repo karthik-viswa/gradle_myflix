@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <title>Hello AngularJS</title>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/flix_calls.js"></script>
+</head>
+
+<body>
+<div ng-controller="ShowItem">
+    <p>The ID is {{item.id}}</p>
+    <p>The name is {{item.name}}</p>
+
+    <br/>
+    Filter by name: <input type="text" data-ng-model="name"/>
+    <ul>
+        <li data-ng-model="items" data-ng-repeat="flick in items | filter: name | orderBy: 'name'">{{ flick.id }} - {{ flick.name }}</li>
+    </ul>
+</div>
+
+<div ng-controller="AddItem">
+    <p>Add an Item</p>
+    <form>
+        ID: <input type="text" data-ng-model="newItem.id"/>
+        Name: <input type="text" data-ng-model="newItem.name"/>
+        <input type="submit" value="Add" ng-click="add(newItem)"/>
+    </form>
+</div>
+</body>
+</html>

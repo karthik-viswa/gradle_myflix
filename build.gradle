@@ -1,0 +1,35 @@
+//group 'com.myflix'
+//version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+//    //compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+//
+    compile "com.sun.jersey:jersey-core:1.9.1"
+    compile "com.sun.jersey:jersey-server:1.9.1"
+    compile "com.sun.jersey:jersey-json:1.9.1"
+//
+//    compile "javax.servlet:servlet-api:2.5"
+
+    // Dependency needed for interceptors and filters.
+    //compile 'com.sun.jersey.contribs:jersey-contribs:1.19'
+
+    // other sample
+    //compile "javax.ws.rs:jsr311-api:1.1.1"
+
+    //compile 'com.sun.jersey:jersey-server:1.13'
+    //compile 'com.sun.jersey:jersey-core:1.13'
+    //compile 'com.sun.jersey:jersey-servlet:1.13'
+
+    testCompile "junit:junit-dep:4.10"
+}
